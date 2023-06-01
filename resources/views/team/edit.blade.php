@@ -68,7 +68,9 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <label>Social Media Links(optional)</label>
+
+
+                                {{-- <label>Social Media Links(optional)</label>
 
                                 <div class="col-sm-12">
                                     <div class="row">
@@ -109,7 +111,7 @@
                                             @enderror
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
 
                             </div>
