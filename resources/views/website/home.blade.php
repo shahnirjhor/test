@@ -486,14 +486,14 @@
                         <div class="work-item">
                             <span></span>
                             <div class="img-box" style="max-height: 300px;">
-                                <img class="img-fluid work-item-img" src="{{ asset('/images/blog/' . $blog->image) }}" alt="01 work">
+                                <img class="img-fluid work-item-img" src="{{ asset('/images/library/' . $blog->image) }}" alt="01 work">
                             </div>
                             <div class="hover-box">
                                 <div class="text-box">
-                                    <div class="tags"><a href="#">{{$blog->title}}</a></div>
+                                    <div class="tags"><a href="{{route('website.librarydetalis', ['id'=>$blog->id, 'category'=> $blog->categories])}}">{{$blog->title}}</a></div>
                                 </div>
                                 <ul class="work-icon">
-                                    <li><a class="popup" href="{{ asset('/images/blog/' . $blog->image) }}"><i class="far fa-eye"></i></a></li>
+                                    <li><a class="popup" href="{{ asset('/images/library/' . $blog->image) }}"><i class="far fa-eye"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -561,13 +561,13 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-item">
                             <div class="img-box" style="max-height: 220px;">
-                                <a href="{{route('website.case-studies', $item->slug)}}" class="open-post">
-                                    <img class="img-fluid" src="{{asset('/images/caseStudies/' . $item->image) }}" alt="{{$item->name}}">
+                                <a href="{{route('website.librarydetalis', ['id'=>$item->id, 'category'=> $item->categories])}}" class="open-post">
+                                    <img class="img-fluid" src="{{asset('/images/library/' . $item->image) }}" alt="{{$item->name}}">
                                 </a>
                             </div>
                             <div class="text-box">
-                                <p>{{$item->name}}</p>
-                                <a href="{{route('website.case-studies', $item->slug)}}" class="link">Read More</a>
+                                <p>{{$item->title}}</p>
+                                <a href="{{route('website.librarydetalis', ['id'=>$item->id, 'category'=>$item->categories])}}" class="link">Read More</a>
                             </div>
                         </div>
                     </div>

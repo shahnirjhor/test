@@ -42,17 +42,17 @@
             <span class="menu-box-icon exit"><i class="fas fa-times"></i></span>
         </div>
     </div>
-    <section class="breadcrumb-header" id="page" style="background-image: url(../website/assets/images/case-studies.webp)">
+    <section class="breadcrumb-header" id="page"  style="background-image: url({{asset('website/assets/images/page-heading-bg.jpg')}})">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="banner">
-                        <h1>Case Studies</h1>
+                        <h1>{{str_replace('-', ' ', $data->categories)}}</h1>
                         <ul>
                             <li><a href="{{ route('website.home') }}">Home</a></li>
                             <li><i class="fas fa-angle-right"></i></li>
-                            <li>{{$case_studies->name}}</li>
+                            <li>{{$data->title}}</li>
                         </ul>
                     </div>
                 </div>
@@ -64,12 +64,37 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="single-services-content-box">
-                        <h2>{{$case_studies->name}}</h2>
-                        <img src="{{asset('/images/caseStudies/' . $case_studies->image) }}" alt="$case_studies->name">
+                        <h2>{{$data->title}}</h2>
+                        <img style="max-height: 400px; width:100%" src="{{asset('/images/library/' . $data->image) }}" alt="$case_studies->name">
 
-                        <p>{!!$case_studies->description!!}</p>
+                        <p>{!!$data->description!!}</p>
+                        
+                        @if ($data->brochure)
+                        <div class="text-center">
+                            <a href="{{ asset('images/library/' . $data->brochure) }}"
+                                class="btn btn-info" target="_blank">
+                                Download Brochure
+                            </a>
+                        </div>
+                        @endif
 
-
+                        @if ($data->event_date)
+                        <div class="row"
+                            style="background-color: #a4ca26; padding:20px; border-radius: 12px">
+                            <div class="col-md-6" title="Event Location">
+                                <i class="fa fa-map-marker" aria-hidden="true"
+                                    style="font-size: 30px;color:white;"></i>
+                                <p style="font-size: 20px; color:white;">
+                                    {{ $data->event_venue }}</p>
+                            </div>
+                            <div class="col-md-6" title="Event Date">
+                                <i class="fa fa-calendar" aria-hidden="true"
+                                    style="font-size: 30px; color:white;"></i>
+                                <p style="font-size: 20px; color:white;">{{ $data->event_date }}
+                                </p>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                 </div>
             </div>

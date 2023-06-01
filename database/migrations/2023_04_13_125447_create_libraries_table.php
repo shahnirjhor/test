@@ -16,7 +16,7 @@ class CreateLibrariesTable extends Migration
         Schema::create('libraries', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->enum('categories', ['whats-new-on-leap-frog', 'news', 'articles', 'events', 'technical-publication-and-case-studies']);
+            $table->enum('categories', ['whats-new', 'news', 'articles', 'events', 'case-study']);
             $table->string('image');
             $table->text('description');
             $table->json('seo');

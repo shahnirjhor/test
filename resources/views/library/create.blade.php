@@ -23,7 +23,7 @@
                                     <div class="form-group">
                                         <label>Title</label>
                                         <input type="text" name="title" class="form-control"
-                                            placeholder="Title for the Library" required />
+                                            placeholder="Title for the Library" value="{{old('title')}}" required />
                                     </div>
                                     @error('title')
                                         <div class="alert alert-danger">{{ $message }} </div>
@@ -35,12 +35,11 @@
                                         <label>Category</label>
                                         <select name="categories" id="categories" class="form-control" required>
                                             <option value="">Select Category</option>
-                                            <option value="whats-new-on-leap-frog">Whats New on Leap Frog</option>
+                                            <option value="whats-new">What's new</option>
                                             <option value="news">News</option>
                                             <option value="articles">Articles</option>
                                             <option value="events">Events</option>
-                                            <option value="technical-publication-and-case-studies">Technical Publication and
-                                                Case Studies</option>
+                                            <option value="case-study">Case Study</option>
                                         </select>
                                     </div>
                                     @error('categories')
@@ -51,7 +50,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <textarea id="description" class="form-control" name="description" rows="10"></textarea>
+                                        <textarea id="description" class="form-control" name="description" rows="10">{{old('description')}}</textarea>
                                     </div>
                                     @error('designation')
                                         <div class="alert alert-danger">{{ $message }} </div>
@@ -61,7 +60,7 @@
                                 <div class="col-sm-12" id="event_venue">
                                     <div class="form-group">
                                         <label>Event Venue</label>
-                                        <input type="text" name="event_venue" class="form-control"
+                                        <input type="text" name="event_venue" value="{{old('event_venue')}}" class="form-control"
                                             placeholder="Event Venue" />
                                     </div>
                                     @error('event_venue')
@@ -104,7 +103,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label>SEO Title</label>
-                                        <input type="text" name="meta_title" class="form-control"
+                                        <input type="text" name="meta_title" value="{{old('meta_title')}}" class="form-control"
                                             placeholder="SEO Title" />
                                     </div>
                                     @error('meta_title')
@@ -115,7 +114,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label>SEO Description</label> &nbsp <span>Upto 160 Characters</span>
-                                        <input type="text" name="meta_description" class="form-control"
+                                        <input type="text" name="meta_description" value="{{old('meta_description')}}" class="form-control"
                                             placeholder="SEO Description" />
                                     </div>
                                     @error('meta_description')
@@ -126,7 +125,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label>SEO Keywords</label> &nbsp <span>Comma Separated</span>
-                                        <input type="text" name="keywords" class="form-control"
+                                        <input type="text" name="keywords" value="{{old('keywords')}}" class="form-control"
                                             placeholder="SEO Keywords" />
                                     </div>
                                     @error('keywords')
@@ -154,7 +153,7 @@
                         $('#event_date').show();
                         $('#brochure').hide();
 
-                    } else if ($(this).val() == 'technical-publication-and-case-studies') {
+                    } else if ($(this).val() == 'case-study') {
                         $('#brochure').show();
                         $('#event_venue').hide();
                         $('#event_date').hide();

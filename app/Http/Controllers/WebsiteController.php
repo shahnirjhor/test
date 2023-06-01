@@ -18,8 +18,8 @@ class WebsiteController extends Controller
     public function index()
     {
         $testimonials = Testimonial::all();
-        $blog = Blog::all();
-        $case_studies = CaseStudies::all();
+        $blog = Library::where('categories','news')->get();
+        $case_studies = Library::where('categories','case-study')->get();
         return view('website.home', compact('testimonials','blog','case_studies'));
     }
 
@@ -131,7 +131,7 @@ class WebsiteController extends Controller
     public function librarySinglePage($id)
     {
         $libraries = Library::find($id);
-
+        dd($libraries);
         return view('website.librarySingle', compact('libraries'));
     }
 
@@ -182,8 +182,19 @@ class WebsiteController extends Controller
         return view('website.policy');
     }
 
-    public function caseStudiesDetalis($slug){
-        $case_studies = CaseStudies::where('slug', $slug)->firstOrFail();
-        return view('website.caseStudiesDetalis',compact('case_studies'));
+
+    public function libraryCategoryList($categories ="" ){
+        if($categories !==""){
+            $libraryLists = Library::where('categories',$categories)->get();
+        }else{
+            $libraryLists = Library::all();
+        }
+        return view('website.libraryListBycategory', compact('libraryLists'));
+    }
+
+    public function libraryDetalis($id, $category){
+        
+        $data = Library::where(['id'=>$id,'categories'=>$category])->first();
+        return view('website.libraryDetalis',compact('data'));
     }
 }

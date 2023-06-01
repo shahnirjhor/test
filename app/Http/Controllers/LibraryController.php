@@ -78,7 +78,7 @@ class LibraryController extends Controller
             $libraries->event_venue = $request->event_venue;
         }
 
-        if ($request->categories == 'technical-publication-and-case-studies') {
+        if ($request->categories == 'case-study') {
             $request->validate([
                 'brochure' => 'mimes:pdf|max:2048'
             ]);
@@ -176,7 +176,7 @@ class LibraryController extends Controller
             $libraries->event_venue = $request->event_venue;
         }
 
-        if ($request->categories == 'technical-publication-and-case-studies') {
+        if ($request->categories == 'case-study') {
             $request->validate([
                 'brochure' => 'mimes:pdf|max:2048'
             ]);

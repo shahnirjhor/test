@@ -13,7 +13,7 @@
     </div>
 
     <!--====== Start Profile One ======-->
-    <div class="profile">
+    {{-- <div class="profile">
         <div class="">
             <div class="">
                 <div class="container">
@@ -46,6 +46,7 @@
                                             Download Brochure
                                         </a>
                                     @endif
+                                    
                                     @if ($libraries->event_date)
                                         <div class="row"
                                             style="background-color: #a4ca26; padding:20px; border-radius: 12px">
@@ -75,6 +76,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--====== End Profile One ======-->
 @endsection

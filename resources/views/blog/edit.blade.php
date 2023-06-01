@@ -23,10 +23,20 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label>Title</label>
-                                        <input type="text" name="title" class="form-control"
+                                        <input type="text" name="title" id="title" class="form-control"
                                             value="{{ $blog->title }}" required />
                                     </div>
                                     @error('title')
+                                        <div class="alert alert-danger">{{ $message }} </div>
+                                    @enderror
+                                </div>
+
+                                <div class="col-sm-12 d-none">
+                                    <div class="form-group">
+                                        <label>Slug</label>
+                                        <input type="text" value="{{ $blog->slug }}" name="slug" id="slug" class="form-control" required />
+                                    </div>
+                                    @error('name')
                                         <div class="alert alert-danger">{{ $message }} </div>
                                     @enderror
                                 </div>
@@ -49,6 +59,16 @@
                                     </div>
                                 </div>
 
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea id="description" class="form-control" name="description" rows="10">{{$blog->description}}</textarea>
+                                    </div>
+                                    @error('designation')
+                                        <div class="alert alert-danger">{{ $message }} </div>
+                                    @enderror
+                                </div>
+
                             </div>
 
                             <button class="btn btn-primary" type="submit">Update Blog</button>
@@ -66,6 +86,31 @@
                     $('#preview').attr('src', e.target.result).show();
                 };
                 reader.readAsDataURL(this.files[0]);
+            });
+
+             // slug generator
+
+             $(document).ready(function() {
+                $('#title').on('input', function() {
+                    var title = $(this).val();
+                    var slug = title.toLowerCase().replace(/[^\w ]+/g, '').replace(/ +/g, '-').replace(/[`~!@#$%^&*()_\-+=\[\]{};:'"\\|\/,.<>?\s]/g, '-');
+                    $('#slug').val(slug);
+                });
+            });
+        </script>
+
+        <script src="https://cdn.tiny.cloud/1/apldqqe4w5o130syomw4ehljdtj1l74db0iojohjmv23hyng/tinymce/5/tinymce.min.js">
+        </script>
+
+
+        <!-- Initialize TinyMCE on the description input field -->
+        <script>
+            tinymce.init({
+                selector: '#description',
+                plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                toolbar_mode: 'floating',
+                tinycomments_mode: 'embedded',
+                tinycomments_author: 'Author name',
             });
         </script>
     @endsection

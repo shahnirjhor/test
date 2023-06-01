@@ -1,141 +1,150 @@
-@extends('website.layouts.app')
+@extends('website.layouts.app_new')
 
 @section('content')
-    <!-- Page Content -->
-    <div class="page-heading header-text">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+<div class="menu-box">
+    <div class="inner-menu">
+        <div class="website-info">
+            <a href="{{ route('website.home') }}" class="logo"><img class="img-fluid" src="{{ asset('website/gatedata/assets/images/logo/first-round-black.png') }}" alt="01 Logo" style="max-width: 111px;"></a>
+            <p>Since 2003, LeapFrog Engineering Services has strived to push the boundaries of what design, engineering, and construction can accomplish.</p>
+        </div>
+        <div class="contact-info">
+            <h4>Contact Info</h4>
+            <div class="contact-box">
+                <i class="icon-call"></i>
+                <div class="box">
+                    <a class="phone" href="tel:08040933570">08040933570 </a>
+                    <a class="phone" href="tel:08040954188">08040954188</a>
+                </div>
+            </div>
+            <div class="contact-box">
+                <i class="icon-email"></i>
+                <div class="box">
+                    <a class="mail" href="mailto:info@lesgroup.in">Info@Lesgroup.in</a>
+                </div>
+            </div>
+            <div class="contact-box">
+                <i class="icon-location"></i>
+                <div class="box">
+                    <p>Chaitanya Dhriti Rudresh No 496, 6th Main, 8th Cross St, Vijaya Bank Layout,</p>
+                    <p>Bengaluru, Karnataka 560076</p>
+                </div>
+            </div>
+        </div>
+        <div class="follow-us">
+            <h4>Follow Us</h4>
+            <ul class="icon-follow">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <span class="menu-box-icon exit"><i class="fas fa-times"></i></span>
+    </div>
+</div>
+<section class="breadcrumb-header" id="page" style="background-image: url(../website/assets/images/page-heading-bg.jpg)">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="banner">
                     <h1>Library</h1>
+                    <ul>
+                        <li><a href="{{ route('website.home') }}">Home</a></li>
+                        <li><i class="fas fa-angle-right"></i></li>
+                        <li>Library</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!--====== gLightBox CSS ======-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.1.0/dist/css/glightbox.min.css" />
 
-    <!--====== portfolio ONE PART START ======-->
-    <section class="portfolio-area portfolio-one">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xxl-6 col-xl-7 col-lg-8">
-
+<section class="services" style="padding: 40px !important; background-color:rgb(164 198 57 / 200%); background-image:none !important;">
+    <div class="container">
+        <div class="sec-title">
+            <div class="row">
+                <div class="col-lg-6 align-items-center">
+                    <h3>Library Category</h3>
                 </div>
             </div>
-            <div class="row" id="tabs">
-                <div class="col-md-4">
-                    <div class="portfolio-menu">
-                        <ul>
-                            <li> <button data-filter="all" class="active">All Library<i class="fa fa-angle-right"></i></button></li>
-                            <li> <button data-filter="whats-new-on-leap-frog">Whats New on Leap
-                                    Frog <i class="fa fa-angle-right"></i></button></li>
-                            <li> <button data-filter="news">News <i class="fa fa-angle-right"></i></button></li>
-                            <li> <button data-filter="articles">Articles <i class="fa fa-angle-right"></i></button></li>
-                            <li> <button data-filter="events">Events <i class="fa fa-angle-right"></i></button></li>
-                            <li> <button data-filter="technical-publication-and-case-studies">Technical
-                                    Publications <i class="fa fa-angle-right"></i></button></li>
-                        </ul>
+        </div>
+        <div class="align-items-center justify-content-between">
+            <div class="row features-provide-list">
 
-                    </div>
-                    <!-- portfolio menu -->
-                </div>
-
-                <div class=" grid col-md-8">
-                    <div class="row">
-                        @foreach ($libraries as $library)
-                            <div class="col-lg-4 col-sm-6" data-filter="{{ $library->categories }}">
-                                <div class="single-blog blog-style-one">
-                                    <div class="blog-image">
-                                        <a href="{{ route('website.librarysingle', $library->id) }}"><img
-                                                src="{{ asset('images/library/' . $library->image) }}"
-                                                alt="{{ $library->title }}" /></a>
-                                        <a href="javascript:void(0)"
-                                            class="category">{{ strtoupper($library->categories) }}</a>
-                                    </div>
-                                    <div class="blog-content">
-                                        <h5 class="blog-title">
-                                            <a href="{{ route('website.librarysingle', $library->id) }}">
-                                                {{ strtoupper($library->title) }}
-                                            </a>
-                                        </h5>
-                                        <span><i class="lni lni-calendar"></i>
-                                            {{ $library->created_at }}</span>
-                                        @php
-                                            $description = explode('.', $library->description);
-                                            $description = implode('.', array_slice($description, 0, 2));
-                                        @endphp
-                                        <span>{!! $description !!}</span>
-
-                                        <a class="badge badge-success" href="{{ route('website.librarysingle', $library->id) }}">READ MORE</a>
-                                    </div>
-                                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="{{route('website.librarycategory')}}">
+                        <div class="item-features-provide-list">
+                            <span></span>
+                            <div class="content-box">
+                                <h4>All Library</h4>
                             </div>
-                        @endforeach
-
-                    </div>
-
-
-                    <!-- row -->
+                        </div>
+                    </a>
                 </div>
-                <!-- row -->
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="{{route('website.librarycategory','whats-new')}}">
+                        <div class="item-features-provide-list">
+                            <span></span>
+                            <div class="content-box">
+                                <h4>What's new</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="{{route('website.librarycategory','news')}}">
+                        <div class="item-features-provide-list">
+                            <span></span>
+                            <div class="content-box">
+                                <h4>News</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="{{route('website.librarycategory','articles')}}">
+                        <div class="item-features-provide-list">
+                            <span></span>
+                            <div class="content-box">
+                                <h4>Articles</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="{{route('website.librarycategory','events')}}">
+                        <div class="item-features-provide-list">
+                            <span></span>
+                            <div class="content-box">
+                                <h4>Events</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <a href="{{route('website.librarycategory','case-study')}}">
+                        <div class="item-features-provide-list">
+                            <span></span>
+                            <div class="content-box">
+                                <h4>Case Study</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
 
             </div>
-            <!-- container -->
-    </section>
-    <!--====== portfolio ONE PART ENDS ======-->
+        </div>
+    </div>
+</section>
 
 
-
-    <!--====== gLightBox js ======-->
-    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.1.0/dist/js/glightbox.min.js"></script>
-
-    <script>
-        const filters = document.querySelectorAll(".portfolio-menu button");
-
-        filters.forEach((filter) => {
-            filter.addEventListener("click", function() {
-                // ==== Filter btn toggle
-                let filterBtn = filters[0];
-                while (filterBtn) {
-                    if (filterBtn.tagName === "BUTTON") {
-                        filterBtn.classList.remove("active");
-                    }
-                    filterBtn = filterBtn.nextSibling;
-                }
-                this.classList.add("active");
-
-                // === filter
-                let selectedFilter = filter.getAttribute("data-filter");
-                let itemsToHide = document.querySelectorAll(
-                    `.grid .col-lg-4:not([data-filter='${selectedFilter}'])`
-                );
-                let itemsToShow = document.querySelectorAll(
-                    `.grid [data-filter='${selectedFilter}']`
-                );
-
-                if (selectedFilter == "all") {
-                    itemsToHide = [];
-                    itemsToShow = document.querySelectorAll(".grid [data-filter]");
-                }
-
-                itemsToHide.forEach((el) => {
-                    el.classList.add("hide");
-                    el.classList.remove("show");
-                });
-
-                itemsToShow.forEach((el) => {
-                    el.classList.remove("hide");
-                    el.classList.add("show");
-                });
-            });
-        });
-
-        //========= glightbox
-        const myGallery = GLightbox({
-            selector: ".glightbox",
-            type: "image",
-            width: 900,
-        });
-    </script>
 @endsection
