@@ -31,26 +31,29 @@
                                         <div class="alert alert-danger">{{ $message }} </div>
                                     @enderror
                                 </div>
+                                
+                                @php
+                                    //$arr = ['whats-new','news','articles','events','case-study'];
+                                    function selectedfn(string $value, string $check)
+                                    {
+                                        if($value == $check){
+                                            return "selected";
+                                        }else{
+                                            return "";
+                                        }
+                                    }
+                                @endphp
 
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label>Category</label>
                                         <select name="categories" id="categories" class="form-control" required>
                                             <option value="">Select Category</option>
-                                            <option value="whats-new-on-leap-frog"
-                                                {{ $libraries->categories == 'whats-new-on-leap-frog' ? 'selected' : '' }}>
-                                                Whats New on Leap Frog</option>
-                                            <option value="news" {{ $libraries->categories == 'news' ? 'selected' : '' }}>
-                                                News</option>
-                                            <option value="articles"
-                                                {{ $libraries->categories == 'articles' ? 'selected' : '' }}>Articles
-                                            </option>
-                                            <option value="events"
-                                                {{ $libraries->categories == 'events' ? 'selected' : '' }}>Events</option>
-                                            <option value="technical-publication-and-case-studies"
-                                                {{ $libraries->categories == 'technical-publication-and-case-studies' ? 'selected' : '' }}>
-                                                Technical Publication and
-                                                Case Studies</option>
+                                            <option {{ selectedfn('whats-new', $libraries->categories) }} value="whats-new">What's new</option>
+                                            <option {{selectedfn('news', $libraries->categories) }} value="news">News</option>
+                                            <option {{selectedfn('articles', $libraries->categories)}} value="articles">Articles</option>
+                                            <option {{selectedfn('events', $libraries->categories)}} value="events">Events</option>
+                                            <option {{selectedfn('case-study', $libraries->categories)}} value="case-study">Case Study</option>
                                         </select>
                                     </div>
                                     @error('categories')

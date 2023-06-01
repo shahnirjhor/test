@@ -57,7 +57,7 @@ Route::get('/portfolio/{id}', [WebsiteController::class, 'porfolioListCategory']
 Route::get('/portfolio/{id}/{category}', [WebsiteController::class, 'porfolioListPage'])->name('website.porfolioList');
 Route::get('/portfolio/{category}/{subcategory}/{id}', [WebsiteController::class, 'porfolioSinglePage'])->name('website.porfolioSingle');
 Route::get('/library', [WebsiteController::class, 'libraryPage'])->name('website.library');
-Route::get('/library/{id}', [WebsiteController::class, 'librarySinglePage'])->name('website.librarysingle');
+/* Route::get('/library/{id}', [WebsiteController::class, 'librarySinglePage'])->name('website.librarysingle'); */
 Route::get('/careers', [WebsiteController::class, 'careerPage'])->name('website.career');
 Route::get('/careers/{id}', [WebsiteController::class, 'careerSinglePage'])->name('website.career.apply');
 Route::post('/careers-form/submit/{id}', [CareerFormSubmitController::class, 'formDataStore'])->name('website.career.formsubmit');
@@ -65,7 +65,10 @@ Route::get('/contact-us', [WebsiteController::class, 'contactPage'])->name('webs
 Route::get('/csr', [WebsiteController::class, 'csrPage'])->name('website.csr');
 Route::get('/policy', [WebsiteController::class, 'policypage'])->name('website.policy');
 Route::get('/search', [WebsiteController::class, 'search'])->name('website.search');
-Route::get('/case-studies/detalis{slug}', [WebsiteController::class, 'caseStudiesDetalis'])->name('website.case-studies');
+
+Route::get('/library/categiry/{category?}', [WebsiteController::class, 'libraryCategoryList'])->name('website.librarycategory');
+Route::get('/library/detalis/{id}/{category}', [WebsiteController::class, 'libraryDetalis'])->name('website.librarydetalis');
+
 
 
 

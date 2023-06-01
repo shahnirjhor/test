@@ -36,7 +36,7 @@
                                         <td>{{ $library->id }}</td>
                                         <td>{{ $library->title }}</td>
                                         <td><span class="badge badge-info">
-                                                @if ($library->categories == 'whats-new-on-leap-frog')
+                                                @if ($library->categories == 'whats-new')
                                                     {{ 'Whats New on Leap Frog' }}
                                                 @elseif($library->categories == 'news')
                                                     {{ 'News' }}
@@ -45,7 +45,7 @@
                                                 @elseif($library->categories == 'events')
                                                     {{ 'Events' }}
                                                 @else
-                                                    {{ 'Technical Publication and Case Studies' }}
+                                                    {{ 'Case Study' }}
                                                 @endif
                                             </span>
                                         </td>
