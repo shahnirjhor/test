@@ -67,7 +67,7 @@
         <div class="row">
             @if ($libraryLists->isNotEmpty())
                 @foreach ($libraryLists as $libraryList)
-                        
+
                     <div class="col-md-4">
                         <div class="blog-item">
                             <div class="img-box" style="max-height: 220px;">
@@ -83,7 +83,7 @@
                                 @endphp
                                 <h4><a style="color: black" href="{{route('website.librarydetalis', ['id'=>$libraryList->id, 'category'=> $libraryList->categories])}}">{{ \Illuminate\Support\Str::limit($title, 39, '...') }}</a></h4>
                                 <span><i class="fa fa-list-alt"></i> {{ $libraryList->categories }}</span>
-                                 <br>   
+                                 <br>
                                 <a href="{{route('website.librarydetalis', ['id'=>$libraryList->id, 'category'=> $libraryList->categories])}}" class="link">Read More</a>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                         <div class="row">
                             <div class="col-md-8 offset-md-2 text-center">
                                 <h3>No Data</h3>
-                                <a href="{{ route('website.verticals') }}" class="btn-1 btn-3">Go Back</a>
+                                <a href="{{ route('website.library') }}" class="btn-1 btn-3">Go Back</a>
                             </div>
                         </div>
                     </div>
