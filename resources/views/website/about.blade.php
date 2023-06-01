@@ -215,6 +215,7 @@
      {{-- VALUE PROPOSITION end --}}
 
      {{-- OUR TEAM start --}}
+     @if ($teams->isNotEmpty())
      <section class="team home-2">
         <div class="container">
             <div class="sec-title home-2">
@@ -225,143 +226,23 @@
                 </div>
             </div>
             <div class="row">
-
+                @foreach ($teams as $team)
                 <div class="col-md-6 col-lg-4">
                     <div class="team-box">
                         <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/male.jpg')}}" alt="02 team">
+                            <img class="img-fluid" src="{{ asset('/images/team/' . $team->image) }}" alt="{{$team->name}}">
                         </div>
                         <div class="text-box">
-                            <h5>Prabhav</h5>
-                            <span>Founder Director & Managing Director</span>
-                            <p style="text-align: justify;">Prabhav holds a B.E. and M.Tech degree, with over 30 years of experience in Project Management. As the Managing Director, he leads the executive team and sets the company's strategic goals.</p>
+                            <h5>{{$team->name}}</h5>
+                            <span>{{$team->designation}}</span>
+                            <p style="text-align: justify;">{{$team->description}}</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/female.png')}}" alt="02 team">
-                        </div>
-                        <div class="text-box">
-                            <h5>Sapna</h5>
-                            <span>Finance Director</span>
-                            <p style="text-align: justify;">Sapna is a Chartered Accountant with an M.Com degree and 9 years of experience. She leads the company's accounting and finance departments, handling budgeting, forecasting, and treasury-related activities.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/female.png')}}" alt="02 team">
-                        </div>
-                        <div class="text-box">
-                            <h5>Nithyashree</h5>
-                            <span>Supply Chain Manager</span>
-                            <p style="text-align: justify;">Nithyashree holds a B.E. degree and is responsible for project planning and analysis, vendor management, and other supply chain activities.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/male.jpg')}}" alt="02 team">
-                        </div>
-                        <div class="text-box">
-                            <h5>Prashant</h5>
-                            <span>Project Manager</span>
-                            <p style="text-align: justify;">Prashant holds a B.E. degree with 28 years of experience in Project Management. As an IRCA Lead auditor, he ensures the integration and standardization of QHSE management systems and project management quality.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/male.jpg')}}" alt="02 team">
-                        </div>
-                        <div class="text-box">
-                            <h5>Prasanth NP</h5>
-                            <span>Business Development Manager</span>
-                            <p style="text-align: justify;">Prasanth holds a B.Com degree and is responsible for business development, marketing, and customer satisfaction, overseeing projects from start to finish.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/male.jpg')}}" alt="02 team">
-                        </div>
-                        <div class="text-box">
-                            <h5>Santhosh</h5>
-                            <span>Supply Chain Coordinator</span>
-                            <p style="text-align: justify;">Santhosh holds a B.Com degree and handles project planning, vendor management, and contract management for the supply chain department.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/male.jpg')}}" alt="02 team">
-                        </div>
-                        <div class="text-box">
-                            <h5>Sathish</h5>
-                            <span>Design Engineer</span>
-                            <p style="text-align: justify;">Sathish holds a Diploma in Electrical Engineering and liaises with the Design team to prepare design documents and interacts with clients to define project and design scope.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/male.jpg')}}" alt="02 team">
-                        </div>
-                        <div class="text-box">
-                            <h5>Laxman</h5>
-                            <span>Commercial Director</span>
-                            <p style="text-align: justify;">Laxman holds an MBA degree and oversees the growth and attainment of the organization's goals by coordinating various teams and analysing the company's performance.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/female.png')}}" alt="02 team">
-                        </div>
-                        <div class="text-box">
-                            <h5>Pavithra</h5>
-                            <span>HR Executive</span>
-                            <p style="text-align: justify;">Pavithra holds an MBA degree and has been working with the company for 2 years. She oversees staff operations, payroll, recruitment, employee training, and compliance with labour laws.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{asset('images/team/male.jpg')}}" alt="02 team">
-                        </div>
-                        <div class="text-box">
-                            <h5>Gopinath</h5>
-                            <span>General Manager</span>
-                            <p style="text-align: justify;">Gopinath holds a B.E. degree in ECE and has 33 years of experience in marketing and business development. He oversees marketing, sales, production, and client interactions, ensuring the company achieves its business goals and grows sustainably.</p>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
         </div>
     </section>
+    @endif
      {{-- OUR TEAM end --}}
 @endsection

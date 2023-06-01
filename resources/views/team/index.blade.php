@@ -26,10 +26,6 @@
                                     <th>Designation</th>
                                     <th>Description</th>
                                     <th>Image</th>
-                                    <th>Facebook</th>
-                                    <th>Linkedin</th>
-                                    <th>Instagram</th>
-                                    <th>Email</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -43,11 +39,6 @@
                                         <td>{{ $team->description }}</td>
                                         <td><img src="{{ asset('/images/team/' . $team->image) }}" alt="{{ $team->name }}"
                                                 width="80px"></td>
-                                        <td>{{ $team->facebook }}</td>
-                                        <td>{{ $team->linkedin }}</td>
-                                        <td>{{ $team->instagram }}</td>
-                                        <td>{{ $team->email }}</td>
-
                                         <td><a href="{{ route('team.edit', $team->id) }}"
                                                 class="btn btn-info btn-block">Edit</a>
                                             <button class="btn btn-danger delete-team btn-block"
