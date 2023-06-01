@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
@@ -38,8 +40,10 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $validation = $request->validate([
-            'title' => 'required',
+            'title' => 'required|unique:blogs|max:255',
+            'slug' => 'required|unique:blogs|max:255',
             'image' => 'required|mimes:png,jpg|max:1024',
+            'description' => 'required',
         ]);
 
         if ($request->hasFile('image') && !empty($request->image)) {
@@ -47,6 +51,9 @@ class BlogController extends Controller
             $request->image->move(public_path('/images/blog/'), $image_name);
             $validation['image'] = $image_name;
         }
+
+        $validation['created_by'] = Auth::user()->id;
+        $validation['updated_by'] = Auth::user()->id;
 
         Blog::create($validation);
         return redirect()->route('blog.index')->with('success', 'Blog Added Successfully');
@@ -85,12 +92,16 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $blog = Blog::findOrFail($id); 
+
         $validation = $request->validate([
-            'title' => 'required',
+            'title' => ['required','max:255',Rule::unique('blogs')->ignore($blog->id)],
+            'slug' => ['required','max:255',Rule::unique('blogs')->ignore($blog->id)],
             'image' => 'mimes:png,jpg|max:1024',
+            'description' => 'required',
         ]);
 
-        $blog = Blog::findOrFail($id);
+        
 
         if ($request->hasFile('image') && !empty($request->image)) {
             if ($blog->image) {
@@ -102,6 +113,9 @@ class BlogController extends Controller
         }else{
             $validation['image'] = $blog->image;
         }
+
+        $validation['created_by'] = $blog->created_by;
+        $validation['updated_by'] = Auth::user()->id;
 
         $blog->update($validation);
         return redirect()->route('blog.index')->with('success', 'Blog upsate Successfully');

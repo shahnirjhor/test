@@ -24,6 +24,7 @@
                                     <th>No.</th>
                                     <th>Title</th>
                                     <th>Image</th>
+                                    <th>Description</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
@@ -35,6 +36,8 @@
                                         <td>{{ $blog->title }}</td>
                                        
                                         <td><img src="{{ asset('/images/blog/' . $blog->image) }}" alt="{{ $blog->title }}" width="80px"></td>
+
+                                        <td>{!! $blog->description !!}</td>
                                        
 
                                         <td><a href="{{ route('blog.edit', $blog->id) }}"
