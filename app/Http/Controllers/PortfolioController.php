@@ -20,8 +20,6 @@ class PortfolioController extends Controller
 
         $portfolios = Portfolio::all();
 
-        // dd($portfolios);
-
         return view('portfolio.index', compact('portfolios'));
     }
 

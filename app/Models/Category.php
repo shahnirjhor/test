@@ -15,6 +15,11 @@ class Category extends Model
         return $this->hasMany(Category::class, 'parent_id');
     }
 
+    public function portfolio()
+    {
+        return $this->hasMany(Portfolio::class, 'subcategory_id');
+    }
+
     public function parent()
     {
         return $this->belongsTo(Category::class, 'parent_id');
@@ -25,10 +30,11 @@ class Category extends Model
         return $this->belongsTo(Category::class, 'category_id','id');
     }
 
-  
+
     public function delete()
     {
         $this->subcategory()->delete();
+        $this->portfolio()->delete();
         return parent::delete();
     }
 }
