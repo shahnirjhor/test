@@ -320,7 +320,7 @@
         <div class="statistic">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-lg-4">
+                    <div class="col-sm-6 col-lg-4 d-flex justify-content-center">
                         <div class="statistic-item">
                             <i class="icon-user"></i>
                             <div class="content">
@@ -331,18 +331,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
+                    <div class="col-sm-6 col-lg-4 d-flex justify-content-center">
                         <div class="statistic-item">
                             <i class="icon-network-1"></i>
                             <div class="content">
                                 <div class="statistic-counter">
-                                    <span class="counter ">7</span> +
+                                    <span class="counter ">07</span> +
                                 </div>
                                 <div class="counter-name">Countries worldwide</div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
+                    <div class="col-sm-6 col-lg-4 d-flex justify-content-center">
                         <div class="statistic-item">
                             <i class="icon-development"></i>
                             <div class="content">
