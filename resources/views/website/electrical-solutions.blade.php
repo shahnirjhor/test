@@ -54,7 +54,7 @@
                         <ul>
                             <li><a href="{{ route('website.home') }}">Home</a></li>
                             <li><i class="fas fa-angle-right"></i></li>
-                            <li>Domain</li>
+                            <li><a href="{{ route('website.domains') }}">Domain</a></li>
                             <li><i class="fas fa-angle-right"></i></li>
                             <li>Electrical Solutions</li>
                         </ul>

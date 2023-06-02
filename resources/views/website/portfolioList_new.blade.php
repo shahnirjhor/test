@@ -52,7 +52,7 @@
                     <ul>
                         <li><a href="{{ route('website.home') }}">Home</a></li>
                         <li><i class="fas fa-angle-right"></i></li>
-                        <li>Our Portfolio</li>
+                        <li><a href="{{ route('website.verticals') }}">Our Portfolio</a></li>
                         <li><i class="fas fa-angle-right"></i></li>
                         <li>{{ $category->name }}</li>
                     </ul>

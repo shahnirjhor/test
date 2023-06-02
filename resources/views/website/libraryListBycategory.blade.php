@@ -48,11 +48,11 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="banner">
-                    <h1>OUR PORTFOLIO</h1>
+                    <h1>Our Library</h1>
                     <ul>
                         <li><a href="{{ route('website.home') }}">Home</a></li>
                         <li><i class="fas fa-angle-right"></i></li>
-                        <li>Our Portfolio</li>
+                        <li><a href="{{ route('website.library') }}">Library</a></li>
                         <li><i class="fas fa-angle-right"></i></li>
                         <li>{{ $libraryLists->isNotEmpty()?$libraryLists->first()->categories:"All Libray" }}</li>
                     </ul>
