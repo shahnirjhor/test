@@ -52,7 +52,7 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><i class="fas fa-angle-right"></i></li>
-                        <li>Domain</li>
+                        <li><a href="{{ route('website.domains') }}">Domain</a></li>
                         <li><i class="fas fa-angle-right"></i></li>
                         <li>Modular Substation Solutions</li>
                     </ul>
@@ -68,53 +68,69 @@
                 <div class="single-services-content-box">
                     <h2>Efficient and Customizable E-House Alternatives</h2>
                     <p>Our e-House modular substation solution offers a cost-effective, risk-reduced alternative to traditional construction methods. With custom-engineered modules, we provide tailored solutions for equipment layout, site footprint, and logistics.</p>
+                    <h3>Key features include</h3>
+                    <ul class="core-about-list">
+                        <li style="width: 100% !important"><i class="fas fa-check"></i>
+                            <h4>
+                                Variety of E-Houses: Single, Split, Multi-Storey, Self Interlock Type, Trailer Mounted, and for Battery Energy Storage Solutions (BESS)
+                            </h4>
+                        </li>
+                        <li style="width: 100% !important"><i class="fas fa-check"></i>
+                            <h4>
+                                Specialized Applications: Containerized Substations, Bare Analyzer Shelters, Prefabricated Data Centre Shelters, and Offshore Applications
+                            </h4>
+                        </li>
+                        <li style="width: 100% !important"><i class="fas fa-check"></i>
+                            <h4>
+                                Design Features: Structural Design using STAAD Pro Analysis & Ansys, Design Codes (IS 800, ASCE, Euro Code), Lifting & Transportation Analysis, In-Site Condition Analysis, Fire Rating, Blast Rated Constructions, Ingress Protection (IP Rating), and PE Stamping for the USA Region
+                            </h4>
+                        </li>
+                        <li style="width: 100% !important"><i class="fas fa-check"></i>
+                            <h4>
+                                Associated E-House Subsystems: Lighting, Earthing & Electrification, Fire Detection & Suppression, HVAC, Lightning Protection, Access Control, and Surveillance Systems
+                            </h4>
+                        </li>
+                        <li style="width: 100% !important"><i class="fas fa-check"></i>
+                            <h4>
+                                Integration & Testing: Mechanical Installation, Electrical Integration, and Testing of OEM's Equipment (Switch Gears, VFD, Statcom, Transformer, UPS, Battery Racks) as per OEM's procedure
+                            </h4>
+                        </li>
+                    </ul>
 
-                    <p> Variety of E-Houses: Single, Split, Multi-Storey, Self Interlock Type, Trailer Mounted, and for Battery Energy Storage Solutions (BESS)
+
+                    <p>Our state-of-the-art facilities and design-build expertise ensure efficiency and competitiveness in cost and time, delivering functional, fully tested modules that reduce on-site installation and commissioning work while providing schedule predictability and a shortened energization period.
                     </p>
-                    <p>Specialized Applications: Containerized Substations, Bare Analyzer Shelters, Prefabricated Data Centre Shelters, and Offshore Applications
-                    </p>
-                    <p>Design Features: Structural Design using STAAD Pro Analysis & Ansys, Design Codes (IS 800, ASCE, Euro Code), Lifting & Transportation Analysis, In-Site Condition Analysis, Fire Rating, Blast Rated Constructions, Ingress Protection (IP Rating), and PE Stamping for the USA Region
-                    </p>
-                    <p> Associated E-House Subsystems: Lighting, Earthing & Electrification, Fire Detection & Suppression, HVAC, Lightning Protection, Access Control, and Surveillance Systems
-                    </p>
-                    <p>Integration & Testing: Mechanical Installation, Electrical Integration, and Testing of OEM's Equipment (Switch Gears, VFD, Statcom, Transformer, UPS, Battery Racks) as per OEM's procedure</p>
-                    <h5>Our state-of-the-art facilities and design-build expertise ensure efficiency and competitiveness in cost and time, delivering functional, fully tested modules that reduce on-site installation and commissioning work while providing schedule predictability and a shortened energization period</h5><br>
-                    <h5>Services : Experience excellence in industrial automation with our platform-independent services. Our end-to-end solutions cover the entire project lifecycle, including design, development, migration, and 24/7 support, for both greenfield and brownfield projects.
-                    </h5>
+                    <h2>Services</h2>
+                    <p>Experience excellence in industrial automation with our platform-independent services. Our end-to-end solutions cover the entire project lifecycle, including design, development, migration, and 24/7 support, for both greenfield and brownfield projects.</p>
                     <h3>Key Offerings</h3>
                     <ul class="core-about-list">
-                        <li><i class="fas fa-check"></i>
+                        <li style="width: 100% !important"><i class="fas fa-check"></i>
                             <h4>
                                 Design & Documentation: Audit, Feasibility Study, System & Network Architecture, Specifications, Project Documentation, and As-Built Documentation
 
 
                             </h4>
                         </li>
-                        <li><i class="fas fa-check"></i>
+                        <li style="width: 100% !important"><i class="fas fa-check"></i>
                             <h4>
                                 Programming & Development: PLC programming, SCADA/HMI development, DCS, Safety, Drives, Protection Relay, RTU, Batch, Historian, and MIS Reporting
 
                             </h4>
                         </li>
-                        <li><i class="fas fa-check"></i>
+                        <li style="width: 100% !important"><i class="fas fa-check"></i>
                             <h4>
                                 System commissioning troubleshooting, and AMC.
                             </h4>
                         </li>
-                        <li><i class="fas fa-check"></i>
+                        <li style="width: 100% !important"><i class="fas fa-check"></i>
                             <h4>
                                 Migration & Upgrade: Upgradation and migration of systems, Simulation, Integrated testing, and Reverse engineering
 
                             </h4>
                         </li>
-                        <li><i class="fas fa-check"></i>
-                            <h4>
-                                Leverage our global team of 300+ skilled engineers, advanced project management practices, and a proven track record for delivering top-quality engineering services.
-
-
-                            </h4>
-                        </li>
                     </ul>
+                    <p>Leverage our global team of 300+ skilled engineers, advanced project management practices, and a proven track record for delivering top-quality engineering services.
+                    </p>
                 </div>
             </div>
         </div>
