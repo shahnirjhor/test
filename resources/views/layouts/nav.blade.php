@@ -1,3 +1,9 @@
+@php
+$c = Request::segment(1);
+$m = Request::segment(2);
+$roleName = Auth::user()->getRoleNames();
+@endphp
+
 <body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
     <script>
         NProgress.configure({
@@ -32,7 +38,7 @@
                 <div class="" data-simplebar style="height: 100%;">
                     <!-- sidebar menu -->
                     <ul class="nav sidebar-inner" id="sidebar-menu">
-                        <li class="has-sub active expand">
+                        <li class="has-sub expand @if($c == 'home') active @endif">
                             <a class="sidenav-item-link" href="{{ route('home') }}" aria-expanded="false"
                                 aria-controls="dashboard">
                                 <i class="mdi mdi-view-dashboard-outline"></i>
@@ -40,18 +46,18 @@
                             </a>
                         </li>
 
-                        <li class="has-sub ">
+                        <li class="has-sub @if($c == 'users'  || $c == "roles") active expand @endif">
                             <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                 data-target="#app" aria-expanded="false" aria-controls="app">
                                 <i class="mdi mdi-account-group"></i>
                                 <span class="nav-text">Users</span> <b class="caret"></b>
                             </a>
 
-                            <ul class="collapse " id="app" data-parent="#sidebar-menu">
+                            <ul class="collapse @if($c == 'users'  || $c == "roles") show @endif" id="app" data-parent="#sidebar-menu">
                                 <div class="sub-menu">
                                     @canany(['users.index', 'users.create', 'users.edit', 'users.destroy',
                                         'users.update', 'users.store'])
-                                        <li class="">
+                                        <li class="@if($c == 'users') active @endif">
                                             <a class="sidenav-item-link" href="{{ route('all_users') }}">
                                                 <span class="nav-text">Users</span>
                                             </a>
@@ -59,7 +65,7 @@
                                     @endcanany
                                     @canany(['roles.index', 'roles.create', 'roles.edit', 'roles.destroy',
                                         'roles.update', 'roles.store'])
-                                        <li class="">
+                                        <li class="@if($c == 'roles') active @endif">
                                             <a class="sidenav-item-link" href="{{ route('roles.index') }}">
                                                 <span class="nav-text">Roles</span>
                                             </a>
@@ -72,18 +78,18 @@
 
                         @canany(['roles.index', 'roles.create', 'roles.edit', 'roles.destroy', 'roles.update',
                             'roles.store'])
-                            <li class="has-sub ">
+                            <li class="has-sub @if($c == 'categories'  || $c == "portfolios" || $c == "client") active expand @endif">
                                 <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                     data-target="#components" aria-expanded="false" aria-controls="components">
                                     <i class="mdi mdi-folder-multiple-outline"></i>
                                     <span class="nav-text">Portfolio</span> <b class="caret"></b>
                                 </a>
 
-                                <ul class="collapse " id="components" data-parent="#sidebar-menu">
+                                <ul class="collapse @if($c == 'categories'  || $c == "portfolios" || $c == "client") show @endif" id="components" data-parent="#sidebar-menu">
                                     <div class="sub-menu">
                                         @canany(['categories.index', 'categories.create', 'categories.edit',
                                             'categories.destroy', 'categories.update', 'categories.store'])
-                                            <li class="">
+                                            <li class="@if($c == 'categories') active @endif">
                                                 <a class="sidenav-item-link" href="{{ route('categories.index') }}">
                                                     <span class="nav-text">Categories</span>
                                                 </a>
@@ -91,14 +97,14 @@
                                         @endcanany
                                         @canany(['portfolios.index', 'portfolios.create', 'portfolios.edit',
                                             'portfolios.destroy', 'portfolios.update', 'portfolios.store'])
-                                            <li class="">
+                                            <li class="@if($c == 'portfolios') active @endif">
                                                 <a class="sidenav-item-link" href="{{ route('portfolios.index') }}">
                                                     <span class="nav-text">Portfolio</span>
                                                 </a>
                                             </li>
                                         @endcanany
                                         @canany(['client.index', 'client.create', 'client.edit', 'client.destroy', 'client.update', 'client.store'])
-                                            <li class="">
+                                            <li class="@if($c == 'client') active @endif">
                                                 <a class="sidenav-item-link" href="{{ route('client.index') }}">
                                                     <span class="nav-text">Client</span> </b>
                                                 </a>
@@ -110,7 +116,7 @@
                         @endcanany
                         @canany(['testimonials.index', 'testimonials.create', 'testimonials.edit',
                             'testimonials.destroy', 'testimonials.update', 'testimonials.store'])
-                            <li class="has-sub ">
+                            <li class="has-sub @if($c == 'testimonials') active @endif">
                                 <a class="sidenav-item-link" href="{{ route('testimonials.index') }}">
                                     <i class="mdi mdi-comment-account"></i>
                                     <span class="nav-text">Testimonials</span> </b>
@@ -120,7 +126,7 @@
 
                         @canany(['libraries.index', 'libraries.create', 'libraries.edit', 'libraries.destroy',
                             'libraries.update', 'libraries.store'])
-                            <li class="has-sub ">
+                            <li class="has-sub @if($c == 'libraries') active @endif">
                                 <a class="sidenav-item-link" href="{{ route('libraries.index') }}">
                                     <i class="mdi mdi-library-books"></i>
                                     <span class="nav-text">Library</span> </b>
@@ -129,17 +135,17 @@
                         @endcanany
 
                         @canany(['career.index'])
-                            <li class="has-sub ">
+                            <li class="has-sub @if($c == 'career'  || $c == "jobs-applied") active expand @endif">
                                 <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                                     data-target="#career" aria-expanded="false" aria-controls="career">
                                     <i class="mdi mdi-briefcase-check"></i>
                                     <span class="nav-text">Career</span><b class="caret"> </b>
                                 </a>
-                                <ul class="collapse " id="career" data-parent="#sidebar-menu">
+                                <ul class="collapse @if($c == 'career'  || $c == "jobs-applied") show @endif" id="career" data-parent="#sidebar-menu">
                                     <div class="sub-menu">
                                         @canany(['career.index', 'career.create', 'career.edit', 'career.destroy',
                                             'career.destroy', 'career.store'])
-                                            <li class="">
+                                            <li class="@if($c == 'career') active @endif">
                                                 <a class="sidenav-item-link" href="{{ route('career.index') }}">
                                                     <span class="nav-text">Career List</span>
                                                 </a>
@@ -147,7 +153,7 @@
                                         @endcanany
                                         @canany(['jobs-applied.index', 'jobs-applied.create', 'jobs-applied.edit',
                                             'jobs-applied.destroy', 'jobs-applied.update', 'jobs-applied.store'])
-                                            <li class="">
+                                            <li class="@if($c == 'jobs-applied') active @endif">
                                                 <a class="sidenav-item-link" href="{{ route('jobs-applied.index') }}">
                                                     <span class="nav-text">Job Applied</span>
                                                 </a>
@@ -159,7 +165,7 @@
                         @endcanany
 
                         @canany(['team.index', 'team.create', 'team.edit', 'team.destroy', 'team.update', 'team.store'])
-                            <li class="has-sub ">
+                            <li class="has-sub @if($c == 'team') active @endif">
                                 <a class="sidenav-item-link" href="{{ route('team.index') }}">
                                     <i class="mdi mdi-account-supervisor"></i>
                                     <span class="nav-text">Team Members</span> </b>
@@ -186,7 +192,7 @@
                         @endcanany --}}
 
                         @canany(['contact.index', 'contact.destroy'])
-                            <li class="has-sub ">
+                            <li class="has-sub @if($c == 'contact') active @endif">
                                 <a class="sidenav-item-link" href="{{ route('contact.index') }}">
                                     <i class="mdi mdi-contact-mail"></i>
                                     <span class="nav-text">Contact Us</span> </b>
