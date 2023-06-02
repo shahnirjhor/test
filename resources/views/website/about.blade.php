@@ -229,8 +229,8 @@
                 @foreach ($teams as $team)
                 <div class="col-md-6 col-lg-4">
                     <div class="team-box">
-                        <div class="img-box">
-                            <img class="img-fluid" src="{{ asset('/images/team/' . $team->image) }}" alt="{{$team->name}}">
+                        <div class="img-box" style="height: 280px; width: 100%;">
+                            <img style="height: 280px; width: 100%;" class="img-fluid" src="{{ asset('/images/team/' . $team->image) }}" alt="{{$team->name}}">
                         </div>
                         <div class="text-box">
                             <h5>{{$team->name}}</h5>
