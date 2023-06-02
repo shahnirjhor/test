@@ -89,7 +89,7 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-sm-3">
-                            <img class="img-fluid" src="{{asset('images/about/Vision.png')}}" alt="">
+                            <img class="img-fluid" src="{{asset('images/about/vision.jpg')}}" alt="">
                         </div>
                         <div class="col-sm-9 align-self-center">
                             <p class="text-justify">We aim to become a market leader and centre of excellence offering services in the domains of Electrical and Instrumentation, Fire Protection, IT Infrastructure, Security Solutions, and Building Automation Systems, and to dedicate ourselves to the inspiring progress of our customers by focusing on best engineering practices, innovative solutions & fostering mutual trust and respect.</p>
@@ -103,7 +103,7 @@
                             <p class="text-justify">We strive to become the best integrated engineering services provider by completing every project safely and on time, with high quality, within budget, and to meet and exceed customer expectations by implementing best industry practices in engineering and project management. We aim to provide stakeholders with a profitable, steady growth and a well-run investment and employees with an apolitical meritocracy in which they can thrive and continue to master new technologies as they develop in our industry and pursue new and emerging markets that are driven by technology.</p>
                         </div>
                         <div class="col-sm-3">
-                            <img class="img-fluid" src="{{asset('images/about/mission.png')}}" alt="">
+                            <img class="img-fluid" src="{{asset('images/about/mission.jpg')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -134,8 +134,8 @@
                             <h1>ABOUT LEAPFROG</h1>
                             <p>Since 2003, Leapfrog Engineering Services has strived to push the boundaries of what design, engineering, and construction can accomplish. Founded by Technocrats as an E&I company, it has been our enduring conviction that a more collaborative and open-minded approach to engineering would lead to work of a higher quality and greater relevance for decades to come. We credit this philosophy for transforming us into a force to be reckoned with in the fields of Electrical Solutions, Instrumentation, Fire Protection, and Industrial Automation Systems.</p>
 
-                            <p>Our team of professionals, engineers, and supply chain experts offers more than two decades of experience in delivering time-bound solutions through the Design-Build delivery mechanism. The idea is not only to benefit your bottom line with efficiency, but to be there when you need us.</p>	
-                                
+                            <p>Our team of professionals, engineers, and supply chain experts offers more than two decades of experience in delivering time-bound solutions through the Design-Build delivery mechanism. The idea is not only to benefit your bottom line with efficiency, but to be there when you need us.</p>
+
                             <p>We have successfully completed projects for various industry verticals such as Oil & Gas, Pharmaceuticals, Food Processing, Manufacturing, and Telecom. With a growing network of clients across the world, commitment to excellence remains the cornerstone of Leapfrog’s culture. We look forward to your continued support.</p>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        
+
                         <div class="col-lg-12">
                             <div class="row features-provide-list">
                                 <div class="col-sm-3">
@@ -211,7 +211,7 @@
             </div>
         </section>
      </div>
-     
+
      {{-- VALUE PROPOSITION end --}}
 
      {{-- OUR TEAM start --}}

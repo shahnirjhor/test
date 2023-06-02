@@ -65,14 +65,29 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="single-services-content-box">
-                        <h2>The Gentle Touch</h2>
-                        <p>At Leapfrog, we believe in giving back to the society. We have created a positive and inspiring workplace culture and our employees care about working for a business that cares for the community.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2>The Gentle Touch</h2>
+                                <p>At Leapfrog, we believe in giving back to the society. We have created a positive and inspiring workplace culture and our employees care about working for a business that cares for the community.</p>
 
-                        <p>We support various institutions that contribute to the society, taking initiatives to help the sick, and promote economic development and education.
-                        </p>
+                                <p>We support various institutions that contribute to the society, taking initiatives to help the sick, and promote economic development and education.
+                                </p>
 
-                        <P>We have identified unique opportunities to drive long-term, systemic change for individuals, families, businesses and communities.
-                        </P>
+                                <P>We have identified unique opportunities to drive long-term, systemic change for individuals, families, businesses and communities.
+                                </P>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="left-image responsive">
+                                    <img src="{{asset('images/about/logo.png')}}" alt="LEap Frog" >
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
                         <h3>Giving Back to Society
                         </h3>
                         <p>A Company involved in touching the lives of others by not only excellent engineering but also taking care of other community needs such as: </p>

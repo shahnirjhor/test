@@ -100,6 +100,7 @@
 
                     <p>Our state-of-the-art facilities and design-build expertise ensure efficiency and competitiveness in cost and time, delivering functional, fully tested modules that reduce on-site installation and commissioning work while providing schedule predictability and a shortened energization period.
                     </p>
+                    <br>
                     <h2>Services</h2>
                     <p>Experience excellence in industrial automation with our platform-independent services. Our end-to-end solutions cover the entire project lifecycle, including design, development, migration, and 24/7 support, for both greenfield and brownfield projects.</p>
                     <h3>Key Offerings</h3>
