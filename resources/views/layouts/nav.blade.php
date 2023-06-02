@@ -167,23 +167,23 @@
                             </li>
                         @endcanany
 
-                        @canany(['blog.index', 'blog.create', 'blog.edit', 'blog.destroy', 'blog.update', 'blog.store'])
+                        {{-- @canany(['blog.index', 'blog.create', 'blog.edit', 'blog.destroy', 'blog.update', 'blog.store'])
                             <li class="has-sub ">
                                 <a class="sidenav-item-link" href="{{ route('blog.index') }}">
                                     <i class="mdi mdi-account-supervisor"></i>
                                     <span class="nav-text">Blog</span> </b>
                                 </a>
                             </li>
-                        @endcanany
+                        @endcanany --}}
 
-                        @canany(['case-studies.index', 'case-studies.create', 'case-studies.edit', 'case-studies.destroy', 'case-studies.update', 'case-studies.store'])
+                        {{-- @canany(['case-studies.index', 'case-studies.create', 'case-studies.edit', 'case-studies.destroy', 'case-studies.update', 'case-studies.store'])
                             <li class="has-sub ">
                                 <a class="sidenav-item-link" href="{{ route('case-studies.index') }}">
                                     <i class="mdi mdi-account-supervisor"></i>
                                     <span class="nav-text">Case Studies</span> </b>
                                 </a>
                             </li>
-                        @endcanany
+                        @endcanany --}}
 
                         @canany(['contact.index', 'contact.destroy'])
                             <li class="has-sub ">
