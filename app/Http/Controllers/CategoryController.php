@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Portfolio;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -136,6 +137,10 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
+        $pCategory = Portfolio::where('category_id', $id)->delete();
+
+        $pSubCategory = Portfolio::where('subcategory_id', $id)->delete();
+
         $categories = Category::find($id);
         $categories->delete();
     }

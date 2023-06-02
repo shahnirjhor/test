@@ -105,9 +105,9 @@
                                 <li class="item-level-1">
                                     <a href="{{ route('website.about') }}" class="link-level-1 {{ request()->is('about') ? 'color-active' : '' }}">About Us</a>
                                 </li>
-                                {{--  <li class="item-level-1">
+                                <li class="item-level-1">
                                     <a href="{{ route('website.contactus') }}" class="link-level-1 {{ request()->is('contact-us') ? 'color-active' : '' }}">Contact Us</a>
-                                </li>  --}}
+                                </li>
 
                             </ul>
                         </div>
