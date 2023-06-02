@@ -1,6 +1,11 @@
 @extends('website.layouts.app_new')
 
 @section('content')
+<style>
+    .pricing-item {
+    max-height: 80%;
+}
+</style>
 <!-- :: Menu Box -->
         <div class="menu-box">
             <div class="inner-menu">
@@ -419,7 +424,7 @@
                         <div class="provide-text-box">
                             <div class="sec-title">
                                 <h3>Message From Our CEO</h3>
-                                <p class="sec-explain">Founded by Technocrats in 2003 as an E&I services company, LeapFrog has now embarked on journey to become a fully integrated Engineering company. It has carved out a niche for itself as an integrated Engineering Services Provider. Today, our services span multiple engineering disciplines like Electrical, Instrumentation, Fire Protection, and Automation. We bring under our umbrella the collective strength of our dedicated and dynamic team of professionals who have won spurs working for various MNC’s. Our vendors have been fine tuned to respond to our needs and seamlessly supply materials to our exacting standards. We have successfully completed projects both in India and overseas for various industry verticals like Oil & Gas, Food Process, Utilities and Infrastructure, Manufacturing, and Telecom. Commitment to excellence is the cornerstone of LeapFrog culture along with our endeavour to generate long term relationship with our clients. The success of achievements in a short span of time is solely scripted by valued customers who have shown immense trust and faith in our ability to deliver, coupled with our strong technical capabilities, impeccable time bound deliveries through the Design-Build delivery mechanism. As we begin this new phase of our journey, we want to reaffirm our commitment to our customers. We look forward to your support.</p>
+                                <p class="sec-explain"  style="text-align:justify">Founded by Technocrats in 2003 as an E&I services company, LeapFrog has now embarked on journey to become a fully integrated Engineering company. It has carved out a niche for itself as an integrated Engineering Services Provider. Today, our services span multiple engineering disciplines like Electrical, Instrumentation, Fire Protection, and Automation. We bring under our umbrella the collective strength of our dedicated and dynamic team of professionals who have won spurs working for various MNC’s. Our vendors have been fine tuned to respond to our needs and seamlessly supply materials to our exacting standards. We have successfully completed projects both in India and overseas for various industry verticals like Oil & Gas, Food Process, Utilities and Infrastructure, Manufacturing, and Telecom. Commitment to excellence is the cornerstone of LeapFrog culture along with our endeavour to generate long term relationship with our clients. The success of achievements in a short span of time is solely scripted by valued customers who have shown immense trust and faith in our ability to deliver, coupled with our strong technical capabilities, impeccable time bound deliveries through the Design-Build delivery mechanism. As we begin this new phase of our journey, we want to reaffirm our commitment to our customers. We look forward to your support.</p>
                             </div>
                         </div>
                     </div>
