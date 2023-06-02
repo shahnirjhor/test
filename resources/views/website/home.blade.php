@@ -484,10 +484,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="work-carousel owl-carousel owl-theme">
-
+                {{-- <div class="work-carousel owl-carousel owl-theme"> --}}
+                    <div class="row">
                     @foreach ($blog as $blog)
-                    <div class="work-carousel-item">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="blog-item">
+                            <div class="img-box" style="max-height: 220px;">
+                                <a href="{{route('website.librarydetalis', ['id'=>$blog->id, 'category'=> $blog->categories])}}" class="open-post">
+                                    <img class="img-fluid" src="{{asset('/images/library/' . $blog->image) }}" alt="{{$blog->name}}">
+                                </a>
+                            </div>
+                            <div class="text-box">
+                                <p>{{$blog->title}}</p>
+                                <a href="{{route('website.librarydetalis', ['id'=>$blog->id, 'category'=>$blog->categories])}}" class="link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- <div class="work-carousel-item">
                         <div class="work-item">
                             <span></span>
                             <div class="img-box" style="max-height: 300px;">
@@ -502,7 +516,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     @endforeach
 
                 </div>

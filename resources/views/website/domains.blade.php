@@ -139,7 +139,7 @@
             <div class="container">
                 <div class="sec-title">
                     <div class="row">
-                        <div class="col-lg-6 align-items-center">
+                        <div class="col-lg-12 align-items-center">
                             <h3>Services</h3>
                             <p>Jump ahead of the competition with Leap Frog Services - Your trusted partner for engineering solutions.</p>
                         </div>
