@@ -42,7 +42,7 @@
         <span class="menu-box-icon exit"><i class="fas fa-times"></i></span>
     </div>
 </div>
-<section class="breadcrumb-header" id="page" style="background-image: url(../website/assets/images/slide_03.JPG)">
+<section class="breadcrumb-header" id="page" style="background-image: url({{asset('website/assets/images/slide_03.jpg')}})">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
