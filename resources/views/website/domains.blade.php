@@ -142,6 +142,7 @@
                         <div class="col-lg-12 align-items-center">
                             <h3>Services</h3>
                             <p>Jump ahead of the competition with Leap Frog Services - Your trusted partner for engineering solutions.</p>
+                            <p>Our extensive Electrical & Instrumentation services related to:</p>
                         </div>
                     </div>
                 </div>
